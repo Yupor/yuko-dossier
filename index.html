@@ -54,6 +54,7 @@
   --np-cream:#FFF6E8;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
+img{max-width:100%;height:auto;display:block;}
 html,body{background:#1a1a17;color:var(--ink);font-family:"Archivo",sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision;}
 a{color:inherit;text-decoration:none;}
 a.lnk{
@@ -1313,8 +1314,8 @@ body{
   .contact-strip .item .lab{font-size:9px;}
 }
 
-/* Small phones — iPhone SE, Mini, narrower screens */
-@media (max-width:430px){
+/* Small phones — iPhone 12 / Pro / Mini / SE */
+@media (max-width:480px){
   body{padding:14px 8px 50px;}
   .masthead{padding:16px 18px 10px;}
   .masthead .left .row{gap:10px;}
@@ -1330,10 +1331,24 @@ body{
   .id-title{font-size:clamp(22px,7vw,32px);}
   .id-title-jp{font-size:13px;}
   .id-body{font-size:11.5px;}
+
+  /* Stats: 2x2 grid for narrow phones */
   .stats{grid-template-columns:1fr 1fr;}
+  .stat{padding:18px 16px;}
+  .stat .num{font-size:36px;}
+  .stat .unit{font-size:11px;}
+  .stat .lab{font-size:9px;}
+  .stat .lab-jp{font-size:10px;}
+
   .contact-strip{gap:8px 14px;}
   .contact-strip .item{font-size:10.5px;gap:6px;}
   .contact-strip .icon{width:11px;height:11px;}
+  .contact-strip .item a{word-break:break-all;}
+
+  /* Miyata image — prevent overflow */
+  .miyata-img-wrap{width:100% !important;max-width:100% !important;}
+  .miyata-img-wrap img{width:100%;height:auto;}
+  .miyata-feature .credit{font-size:9px !important;letter-spacing:0.1em !important;padding:6px 12px !important;word-break:break-word;}
 
   /* Feature padding tightening */
   .tft-feature .inner,
