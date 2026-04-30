@@ -1334,11 +1334,12 @@ body{
 
   /* Stats: 2x2 grid for narrow phones */
   .stats{grid-template-columns:1fr 1fr;}
-  .stat{padding:18px 16px;}
-  .stat .num{font-size:36px;}
-  .stat .unit{font-size:11px;}
-  .stat .lab{font-size:9px;}
-  .stat .lab-jp{font-size:10px;}
+  .stat{padding:16px 12px;min-width:0;overflow:hidden;}
+  .stat .num{font-size:30px;flex-wrap:nowrap;white-space:nowrap;gap:3px;}
+  .stat .num .unit{font-size:9px;letter-spacing:0.1em;margin-left:3px;flex-shrink:0;}
+  .stat .num .plus{font-size:0.5em;}
+  .stat .lab{font-size:8.5px;letter-spacing:0.16em;}
+  .stat .lab-jp{font-size:9.5px;}
 
   .contact-strip{gap:8px 14px;}
   .contact-strip .item{font-size:10.5px;gap:6px;}
